@@ -214,8 +214,14 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-compiling-java-programs.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        }
+      ],
       "id": "computer-programming-compiling-java-programs",
+      "layout": "1-panel",
       "learningObjectives": "",
       "path": [],
       "reset": [],
@@ -226,8 +232,24 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-displaying-two-messages.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        },
+        {
+          "action": "open",
+          "panel": 0,
+          "path": "code/ch01/Hello2.java"
+        },
+        {
+          "action": "open",
+          "panel": 1,
+          "path": "code/ch01/Goodbye.java"
+        }
+      ],
       "id": "computer-programming-displaying-two-messages",
+      "layout": "3-cell",
       "learningObjectives": "",
       "path": [],
       "reset": [],
@@ -238,8 +260,24 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-formatting-source-code.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        },
+        {
+          "action": "open",
+          "panel": 0,
+          "path": "code/1/Goodbye.java"
+        },
+        {
+          "action": "open",
+          "panel": 1,
+          "path": "code/2/Goodbye.java"
+        }
+      ],
       "id": "computer-programming-formatting-source-code",
+      "layout": "3-cell",
       "learningObjectives": "",
       "path": [],
       "reset": [],
@@ -250,8 +288,19 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-using-escape-sequences.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        },
+        {
+          "action": "open",
+          "panel": 0,
+          "path": "code/ch01/Hello3.java"
+        }
+      ],
       "id": "computer-programming-using-escape-sequences",
+      "layout": "2-panels",
       "learningObjectives": "",
       "path": [],
       "reset": [],
@@ -262,8 +311,14 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-what-is-computer-science-.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        }
+      ],
       "id": "computer-programming-what-is-computer-science-",
+      "layout": "1-panel",
       "learningObjectives": "",
       "path": [],
       "reset": [],
@@ -298,13 +353,72 @@
     {
       "chapter": false,
       "content-file": ".guides/content/computer-programming-exercises.md",
-      "files": [],
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        }
+      ],
       "id": "computer-programming-exercises",
+      "layout": "1-panel",
       "learningObjectives": "",
       "path": [],
       "reset": [],
       "teacherOnly": false,
       "title": "Exercises",
+      "type": "markdown"
+    },
+    {
+      "chapter": false,
+      "content-file": ".guides/content/computer-programming-exercise-1-1.md",
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        }
+      ],
+      "id": "computer-programming-exercise-1-1",
+      "layout": "1-panel",
+      "learningObjectives": "",
+      "path": [],
+      "reset": [],
+      "teacherOnly": false,
+      "title": "Exercise 1.1",
+      "type": "markdown"
+    },
+    {
+      "chapter": false,
+      "content-file": ".guides/content/computer-programming-exercise-1-2.md",
+      "files": [
+        {
+          "action": "close",
+          "path": "#tabs"
+        },
+        {
+          "action": "open",
+          "panel": 0,
+          "path": "code/ch01/Hello4.java"
+        }
+      ],
+      "id": "computer-programming-exercise-1-2",
+      "layout": "2-panels",
+      "learningObjectives": "",
+      "path": [],
+      "reset": [],
+      "teacherOnly": false,
+      "title": "Exercise 1.2",
+      "type": "markdown"
+    },
+    {
+      "chapter": false,
+      "content-file": ".guides/content/computer-programming-exercise-1-3.md",
+      "files": [],
+      "id": "computer-programming-exercise-1-3",
+      "learningObjectives": "",
+      "path": [],
+      "reset": [],
+      "teacherOnly": false,
+      "title": "Exercise 1.3",
       "type": "markdown"
     },
     {

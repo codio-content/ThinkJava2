@@ -72,6 +72,12 @@ sections:
             action: close
   - name: "What Is a Computer?"
     type: section
+    transformations:
+        - remove: 3
+          position: 24
+        - add: |
+                Not surprisingly, searching for “computer” on Google Images ([https://images.google.com/](https://images.google.com/)) displays rows and rows of these types of machines.
+          position: 25
     configuration:
       layout: 1-panel
       files:
@@ -87,13 +93,51 @@ sections:
   - name: "The Hello World Program"
     type: section
     transformations:
-        - remove: 1
-          position: 87
-        - add:  |
-                 See the example java code in the left pane. To compile and run the code, press the "Run!"
+        - remove: 2
+          position: 86
+        - add: |
+                 All it does is output `Hello, World!` to the screen.
+                 See the example java code in the left pane. To compile and run the code, press the "Run!" button.
                  {Run!}(sh .guides/bg.sh javac code/ch01/Hello.java java -cp code/ch01/ Hello )
-
           position: 105
+        - remove: 1
+          position: 128
+        - add: |
+                  In the Hello World program, line 5 is a **print statement** that displays a message to the user. [Click here to view.](open_file code/ch01/Hello.java panel=0 ref="System" count=1)
+
+          position: 129
+        - add: |
+                  [Click to remove the highlight.](open_file code/ch01/Hello.java panel=0)
+          position: 134
+        - remove: 1
+          position: 151
+        - add: |
+                  This program defines one method named `main`. [Click to view.](open_file code/ch01/Hello.java panel=0 ref="static" count=1)
+
+          position: 152
+        - add: |
+                  [Click to remove the highlight.](open_file code/ch01/Hello.java panel=0)
+
+          position: 157
+        - remove: 1
+          position: 164
+        - add: |
+                  The program defines [a class (click to view)](open_file code/ch01/Hello.java panel=0 ref="public" count=1), called Hello. 
+                  [Click to remove the highlight.](open_file code/ch01/Hello.java panel=0)
+
+          position: 165
+        - remove: 1 
+          position: 171
+        - add: |
+                Java uses curly braces (`{` and `}`) to group things together.
+          position: 172
+        - remove: 1
+          position: 176
+        - add: |
+                  [This line (click) is a comment](open_file code/ch01/Hello.java panel=0 ref="//" count=1), which is a bit of English text that explains the code.
+                  [Click to remove the highlight.](open_file code/ch01/Hello.java panel=0)
+
+          position: 177
     configuration:
       layout: 2-panels
       files:
@@ -104,19 +148,185 @@ sections:
             action: open
   - name: "Compiling Java Programs"
     type: section
+    configuration:
+      layout: 1-panel
+      files:
+          - path: "#tabs"
+            action: close
   - name: "Displaying Two Messages"
     type: section
+    transformations:
+        - remove: 1
+          position: 278
+        - add: |
+                 For example, take a look at Hello2.java in the top left corner. To compile and run the code, press the "Run!" button.
+                 {Run!}(sh .guides/bg.sh javac code/ch01/Hello2.java java -cp code/ch01/ Hello2 )
+
+          position: 279
+        - remove: 1
+          position: 308
+        - add: |
+                 For example, take a look at Goodbye.java in the bottom left corner. [Click to view the print statement without the newline.](open_file code/ch01/Goodbye.java panel=1 ref="Goodbye," count=1)
+                 
+                 ```
+                 System.out.print("Goodbye, ");
+                 ```
+                 
+                 [Click to remove the highlight.](open_file code/ch01/Goodbye.java panel=1)
+                 To compile and run the code, press the "Run!" button.
+                 {Run!}(sh .guides/bg.sh javac code/ch01/Goodbye.java java -cp code/ch01/ Goodbye )
+
+          position: 309
+    configuration:
+      layout: 3-cell
+      files:
+          - path: "#tabs"
+            action: close
+          - path: "code/ch01/Hello2.java"
+            panel: 0
+            action: open
+          - path: "code/ch01/Goodbye.java"
+            panel: 1
+            action: open
   - name: "Formatting Source Code"
     type: section
+    transformations:
+        - remove: 1
+          position: 348
+        - add: |
+                 For example, the code to the upper left is legal. To compile and run the code, press the "Run!" button.
+                 {Run!}(sh .guides/bg.sh javac code/1/Goodbye.java java -cp code/1/ Goodbye )
+
+          position: 350
+        - remove: 1
+          position: 360
+        - add: |
+                 So even the code on the lower left is legal. To compile and run the code, press the "Run!" button.
+                 {Run!}(sh .guides/bg.sh javac code/2/Goodbye.java java -cp code/2/ Goodbye )
+
+          position: 362
+        - remove: 1
+          position: 372
+        - remove: 1
+          position: 389
+        - add: |
+                 For example, Google publishes its Java coding standards for use in open source projects: [click here](open_preview https://google.github.io/styleguide/javaguide.html panel=0) to learn more.
+
+          position: 390
+    configuration:
+      layout: 3-cell
+      files:
+          - path: "#tabs"
+            action: close
+          - path: "code/1/Goodbye.java"
+            panel: 0
+            action: open
+          - path: "code/2/Goodbye.java"
+            panel: 1
+            action: open
   - name: "Using Escape Sequences"
     type: section
+    transformations:
+        - remove: 1
+          position: 404
+        - add: |
+                 You just have to tell Java where to put the line breaks. For example, take a look at [line 4 on the code on the left (click).](open_file code/ch01/Hello3.java panel=0 ref="System" count=1)
+                 ```
+                  public class Hello3 {
+
+                      public static void main(String[] args) {
+                          System.out.print("Hello!\nHow are you doing?\n");
+                      }
+                  }
+                 ``` 
+                 [Click to remove the highlight.](open_file code/ch01/Hello3.java panel=0)
+                 To compile and run the code, comment out line 5 using a `//` and press the "Run!" button.
+                 {Run!}(sh .guides/bg.sh javac code/ch01/Hello3.java java -cp code/ch01/ Hello3 1)
+
+          position: 405
+        - remove: 5
+          position: 416
+        - add: |
+                 
+                 ```java
+                  Hello!
+                  How are you doing?
+                  ```
+          position: 421
+        - remove: 5
+          position: 448
+        - add: |
+                 For example, to write quotation marks inside of strings, you need to escape them with a backslash, as in [line 5](open_file code/ch01/Hello3.java panel=0 ref="println" count=1) on the code on the left. 
+                 
+                 ```
+                 System.out.println("She said \"Hello!\" to me.");
+                 ```
+                 
+                 [Click to remove the highlight.](open_file code/ch01/Hello3.java panel=0)
+                 To compile and run the code, remove the comment from line 5, comment out line 4 using a `//` and press the "Run!" button. 
+                 {Run!}(sh .guides/bg.sh javac code/ch01/Hello3.java java -cp code/ch01/ Hello3 2)
+
+          position: 453
+    configuration:
+      layout: 2-panels
+      files:
+          - path: "#tabs"
+            action: close
+          - path: "code/ch01/Hello3.java"
+            panel: 0
+            action: open
   - name: "What Is Computer Science?"
     type: section
+    transformations:
+        - remove: 1
+          position: 466
+        - add: |
+                If you're interested in learning more about Java itself, Oracle maintains an official set of tutorials on its website [https://thinkjava.org/tutorial](open_preview https://thinkjava.org/tutorial panel=0).
+          position: 467
+    configuration:
+      layout: 1-panel
+      files:
+          - path: "#tabs"
+            action: close
   - name: "Debugging Programs"
     type: section
+    transformations:
+        - remove: 3
+          position: 500
+        - add: |
+                 When presented with code examples within this book, be sure to experiment with variations in the code in order to get the full picture of how a given language feature, code snippet, or solution works. 
+
+          position: 505
   - name: "Vocabulary"
     type: section
   - name: "Exercises"
+    type: section
+    transformations:
+        - remove: 77
+          position: 659
+    configuration:
+      layout: 1-panel
+      files:
+          - path: "#tabs"
+            action: close
+  - name: "Exercise 1.1"
+    type: section
+    configuration:
+      layout: 1-panel
+      files:
+          - path: "#tabs"
+            action: close
+  - name: "Exercise 1.2"
+    type: section
+    configuration:
+      layout: 2-panels
+      files:
+          - path: "#tabs"
+            action: close
+          - path: "code/ch01/Hello4.java"
+            panel: 0
+            action: open
+  - name: "Exercise 1.3"
     type: section
   - name: "Variables and Operators"
     type: chapter
@@ -550,3 +760,76 @@ sections:
     type: section
   - name: "Logic Errors"
     type: section
+insert_sections: 
+  - name: Exercise 1.1
+    type: section
+    chapter: Computer programming
+    section: Exercises
+    before: false
+    markdown: |
+
+      Computer scientists have the annoying habit of using common English words to mean something other than their common English meanings.
+      For example, in English, statements and comments are the same thing, but in programs they are different.
+
+
+      {Submit Answer!|assessment}(free-text-3242694277)
+      {Submit Answer!|assessment}(free-text-3427385436)
+      {Submit Answer!|assessment}(free-text-3825581846)
+      {Submit Answer!|assessment}(free-text-3954712850)
+
+  - name: Exercise 1.2
+    type: section
+    chapter: Computer programming
+    section: Exercises
+    before: false
+    markdown: |
+
+      Before you do anything else, make sure you know how to run a Java program within the platform.
+
+      * At the left is the Hello World program from the beginning of this chapter. Press the "Run!" and make sure it works.
+        {Run!}(sh .guides/bg.sh javac code/ch01/Hello4.java java -cp code/ch01/ Hello4 1)
+
+      * Add a print statement that displays a second message after the `Hello, World!`.
+        Say something witty like, `How are you?`.
+        Press the "Run!" to see how it worked.
+        {Run!}(sh .guides/bg.sh javac code/ch01/Hello4.java java -cp code/ch01/ Hello4 2)
+
+      * Add a comment to the program (anywhere).
+        Press the "Run!" to see how it worked.
+        {Run!}(sh .guides/bg.sh javac code/ch01/Hello4.java java -cp code/ch01/ Hello4 3)
+        The new comment should not affect the result.
+
+      This exercise may seem trivial, but it is the starting place for many of the programs we will work with.
+      To debug with confidence, you will need to have confidence in your programming environment.
+
+      In some environments, it is easy to lose track of which program is executing.
+      You might find yourself trying to debug one program while you are accidentally running another.
+      Adding (and changing) print statements is a simple way to be sure that the program you are looking at is the program you are running. 
+      
+  - name: Exercise 1.3
+    type: section
+    chapter: Computer programming
+    section: Exercises
+    before: false
+    markdown: | 
+      It is a good idea to commit as many errors as you can think of, so that you see what error messages the compiler produces.
+      Sometimes the compiler tells you exactly what is wrong, and all you have to do is fix it.
+      But sometimes the error messages are misleading.
+      Over time you will develop a sense for when you can trust the compiler and when you have to figure things out yourself.
+
+      Starting with the Hello World program, try out each of the following errors.
+      After you make each change, compile the program, read the error message (if there is one), and then fix the error.
+
+      * Remove one of the opening curly braces.
+      * Remove one of the closing curly braces.
+      * Instead of `main`, write `mian`.
+      * Remove the word `static`.
+      * Remove the word `public`.
+      * Remove the word `System`.
+      * Replace `println` with `Println`.
+      * Replace `println` with `print`.
+      * Delete one parenthesis.
+      * Add an extra parenthesis.
+      
+      Press the "Run!" to see how these changes, and any others you can think of, work.
+      {Run!}(sh .guides/bg.sh javac code/ch01/Hello4.java java -cp code/ch01/ Hello4 3)
